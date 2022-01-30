@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Domowy Budżet</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;400;600;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style/main.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.3.2/uuid.min.js" integrity="sha512-UNM1njAgOFUa74Z0bADwAq8gbTcqZC8Ej4xPSzpnh0l6KMevwvkBvbldF9uR++qKeJ+MOZHRjV1HZjoRvjDfNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+  
+  </head>
+  <body>
+    <!-- <script type="module" src="./js/incomes.js" ></script>
+    <script type="module" src="js/expenses.js"></script>
+    <script type= "module" src="js/helperFunctions.js"></script> -->
+    <div id="div-logo">
+      <img src="logo/logoo.jpg" height="50px" width="50px">
+    </div>
+    <!-- <div id="state">POZOSTAŁO:</div> -->
+    <div id="state-value">0</div>
+    </div>
+    <div id=incomes-and-expences>
+      <div class=div-input-and-list>
+        <div class="div-input">
+          <h3>PRZYCHODY</h3>
+          <form id="add-income">
+            <input
+              type="text"
+              name="name"
+              placeholder="Nazwa przychodu"
+              maxlength="30"
+              onclick="this.value=null"
+            />
+            <input 
+              type="number" 
+              name="amount" 
+              placeholder="Kwota" 
+              maxlength="30" 
+              onclick="this.value=null"
+            />
+            <button type="submit" class="btn">Dodaj</button>
+          </form>
+        </div>
+          <ul id="incomes"></ul>
+          <p>RAZEM PRZYCHODY:</p>
+          <div id="sum-of-incomes">0</div>
+      </div>
+
+        <div class=div-input-and-list>
+          <div class="div-input">
+                  <h3>WYDATKI</h3>
+                  <form id="add-expense">
+                    <input
+                      type="text"
+                      name="name"
+                      placeholder="Nazwa wydatków"
+                      maxlength="30"
+                      onclick="this.value=null"
+                    />
+                    <input 
+                      type="number" 
+                      name="amount" 
+                      placeholder="Kwota" 
+                      maxlength="30" 
+                      onclick="this.value=null"
+                    />
+                    <button type="submit" class="btn">Dodaj</button>
+                  </form>
+            </div>
+            <ul id="expenses"></ul>
+            <p>RAZEM WYDATKI:</p>
+            <div id="sum-of-expenses">0</div>
+        </div>
+      
+    </div>
+  <script src="js/incomes.js"></script>
+  <script src="js/expenses.js">  </script>
+  </body>
+</html>

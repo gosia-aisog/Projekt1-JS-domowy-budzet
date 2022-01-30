@@ -1,0 +1,71 @@
+* {
+  /* width: 100%; */
+  margin: 0 auto;
+  /* padding: 0; */
+}
+
+#state-value {
+  display: flex;
+  justify-content: center;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+}
+
+#incomes-and-expences {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  /* flex-wrap: wrap; */
+  /* width: 600px; */
+  background-color: rgb(87, 161, 14);
+}
+
+#incomes {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+}
+
+#expenses {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+}
+
+.div-input {
+  background-color: rgb(241, 252, 231);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.div-input-and-list {
+  width: 100%;
+  border: 3px solid rgb(41, 75, 6);
+  /* width: 250px;
+  margin: 20px; */
+}
+
+.btn {
+  width: 30%;
+  display: flex;
+  justify-content: center;
+}
+input {
+  width: 95%;
+}
+
+/* .lists-and-sum {
+  display: flex;
+  justify-content: center; */
+/* } */
+@media screen and (min-width: 400px) {
+  .div-input-and-list {
+    flex-direction: row;
+  }
+}
+@media screen and (min-width: 800px) {
+  #incomes-and-expences {
+    flex-direction: row;
+  }
+}
