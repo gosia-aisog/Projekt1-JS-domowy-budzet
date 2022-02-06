@@ -97,14 +97,14 @@ const renderExpenses = () => {
 
       const editExpenseBtnDOM = document.createElement("button");
       editExpenseBtnDOM.textContent = "Edytuj";
-      editExpenseBtnDOM.setAttribute("style", "width:50px");
+      editExpenseBtnDOM.setAttribute("class", "btn2");
       editExpenseBtnDOM.addEventListener("click", () => {
         expenses = toggleIsEditedIncome(expenses, expense.id);
         renderExpenses();
       });
       const deleteExpenseBtnDOM = document.createElement("button");
       deleteExpenseBtnDOM.textContent = "Usuń";
-      deleteExpenseBtnDOM.setAttribute("style", "width:50px");
+      deleteExpenseBtnDOM.setAttribute("class", "btn2");
       deleteExpenseBtnDOM.addEventListener("click", (e) => {
         expenses = deleteExpense(expenses, expense.id);
         renderExpenses();

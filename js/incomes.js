@@ -78,7 +78,7 @@ const renderIncomes = () => {
 
       const confirmIncomeBtnDOM = document.createElement("button");
       confirmIncomeBtnDOM.textContent = "Zatwierdź";
-      confirmIncomeBtnDOM.setAttribute("style", "width:70px");
+      confirmIncomeBtnDOM.setAttribute("class", "btn2");
 
       editFormDOM.append(editFormNameInputDOM);
       editFormDOM.append(editFormAmountInputDOM);
@@ -107,14 +107,14 @@ const renderIncomes = () => {
 
       const editIncomeBtnDOM = document.createElement("button");
       editIncomeBtnDOM.textContent = "Edytuj";
-      editIncomeBtnDOM.setAttribute("style", "width:50px");
+      editIncomeBtnDOM.setAttribute("class", "btn2");
       editIncomeBtnDOM.addEventListener("click", () => {
         incomes = toggleIsEditedIncome(incomes, income.id);
         renderIncomes();
       });
       const deleteIncomeBtnDOM = document.createElement("button");
       deleteIncomeBtnDOM.textContent = "Usuń";
-      deleteIncomeBtnDOM.setAttribute("style", "width:50px");
+      deleteIncomeBtnDOM.setAttribute("class", "btn2");
       deleteIncomeBtnDOM.addEventListener("click", (e) => {
         incomes = deleteIncome(incomes, income.id);
         renderIncomes();
