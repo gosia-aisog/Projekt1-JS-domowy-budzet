@@ -2,16 +2,10 @@
 //UPDATE <FUNCS>
 //VIEW (UI)
 //EVENTS
-
 //STATE->VIEW (show view+state)np. renderExpenses
 //EVENT -> STATE ->UPDATE ->NEW STATE -> VIEW (view+newState)
 // https://staltz.com/img/mvu-unidir-ui-arch.jpg
 
-// import { qs } from "./helperFunctions";
-// import { sum } from "./helperFunctions";
-
-// const qs = (selector) => document.querySelector(selector);
-// const sum = (arr) => arr.reduce((acc, { amount }) => acc + amount, 0);
 //DOM elements
 const addExpenseDOM = qs("#add-expense");
 const expensesDOM = qs("#expenses");
@@ -22,7 +16,6 @@ let expenses = [
 ];
 
 //UPDATE
-// import {addNewExpense, ...} from "./update.js";
 const addNewExpense = (oldExpenses, newExpense) => {
   return [...oldExpenses, newExpense];
 };
@@ -118,7 +111,6 @@ const renderExpenses = () => {
   });
   sumOfExpensesDOM.innerHTML = sum(expenses);
 
-  // stateValueDOM.innerHTML = sum(incomes) - sum(expenses);
   message(incomes, expenses, stateValueDOM);
 };
 

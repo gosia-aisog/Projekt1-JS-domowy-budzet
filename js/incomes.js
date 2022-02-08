@@ -7,9 +7,7 @@
 //EVENT -> STATE ->UPDATE ->NEW STATE -> VIEW (view+newState)
 // https://staltz.com/img/mvu-unidir-ui-arch.jpg
 
-// import { qs } from "./helperFunctions";
-// import { sum } from "./helperFunctions";
-
+//helper functions
 const qs = (selector) => document.querySelector(selector);
 const sum = (arr) => arr.reduce((acc, { amount }) => acc + amount, 0);
 
@@ -37,7 +35,6 @@ let incomes = [
 ];
 
 //UPDATE
-// import {addNewIncome, ...} from "./update.js";
 const addNewIncome = (oldIncomes, newIncome) => {
   return [...oldIncomes, newIncome];
 };
@@ -123,16 +120,10 @@ const renderIncomes = () => {
       incomeDOM.appendChild(deleteIncomeBtnDOM);
     }
     incomesDOM.appendChild(incomeDOM);
-
-    // sumOfIncomesDOM.innerHTML = sum(incomes);
-
-    // stateValueDOM.innerHTML = sum(incomes) - sum(expenses);
-
     addIncomeDOM.reset();
   });
   sumOfIncomesDOM.innerHTML = sum(incomes);
 
-  // stateValueDOM.innerHTML = sum(incomes) - sum(expenses);
   message(incomes, expenses, stateValueDOM);
 };
 
